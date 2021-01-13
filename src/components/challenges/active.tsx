@@ -57,16 +57,13 @@ const Active: FunctionComponent<ActiveProps> = ({ content }) => {
   };
 
   return (
-    <div className={classNames.boxConent}>
+      <div className={classNames.boxConent}>
       <p className={classNames.heading}>{content.title}</p>
       <Details text='Level' value={content.level} />
       <Details text='Challenge Started' value={content.start_date} />
       <Details text='Challenge Ends' value={content.end_date} />
       <div className={classNames.participants}>
-        <Details
-          text='Active Participants'
-          value={content.participants.length}
-        />
+        <Details text='Active Participants' value={content.participants.length} />
         <Participants participants={content.participants} />
       </div>
       {!state.is_user_subscribed ? (
@@ -76,7 +73,7 @@ const Active: FunctionComponent<ActiveProps> = ({ content }) => {
       ) : (
         ''
       )}
-    </div>
+      </div>
   );
 };
 
